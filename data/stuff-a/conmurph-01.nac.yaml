@@ -1,0 +1,25 @@
+---
+apic:
+  tenants:
+    - name: conmurph
+      managed: false
+
+      vrfs:
+      - name: conmurph.vrf-01
+    
+      
+      bridge_domains: 
+
+        - name: 1.2.3.4
+          vrf: conmurph.vrf-01
+          description: Used for one-arm PBR
+          unknown_unicast: flood
+          unknown_ipv4_multicast: flood
+          arp_flooding: true
+        - name: 1.2.3.4-2
+          vrf: conmurph.vrf-01
+          description: Used for one-arm PBR
+          unknown_unicast: flood
+          unknown_ipv4_multicast: flood
+          arp_flooding: true
+
